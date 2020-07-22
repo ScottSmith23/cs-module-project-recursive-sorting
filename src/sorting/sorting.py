@@ -57,17 +57,14 @@ def merge_in_place(arr, start, mid, end):
     while start <= mid and startr <= end:
         if arr[start] <= arr[startr]:
             start += 1
-
         else:
             value = arr[startr]
             index = startr
-
             while index != start:
                 arr[index] = arr[index - 1]
                 index -= 1
 
             arr[start] = value
-
             start += 1
             mid += 1
             startr += 1
